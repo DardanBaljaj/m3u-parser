@@ -37,7 +37,7 @@ export class M3UReaderService {
             tvg_name: this.getValueOfParametersFromLine(line, this.TVG_NAME_REGEX),
             tvg_logo: this.getValueOfParametersFromLine(line, this.TVG_LOGO_REGEX),
             group_title: this.getValueOfParametersFromLine(line, this.GROUP_TITLE_REGEX),
-            name: line.substring(line.lastIndexOf("\", ") + 3)
+            name: line.substring(line.lastIndexOf(",") + 1).trim()
           }, 
           other : []
         });
